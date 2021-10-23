@@ -1,0 +1,127 @@
+/*
+File: style.css
+GUI Assignment: Homework 3 - Creating an Interactive Dynamic Table
+Michael McGilvray, michael_mcgilvray@student.uml.edu
+Copyright (c) 2021 by Michael McGilvray. All rights reserved. May be freely 
+copied or excerpted for educational purposes with credit to the author.
+Updated by MM on October 23, 2021 at 1:00PM
+
+This file defines the look and style of the multiplication generator. It changes
+how all relevant HTML elements are displayed normally and also when they are
+interacted with. Additionally, it stylizes elements that will later be added
+through the dynamic table generation in the js file.
+*/
+
+html{
+    height: 98%;
+}
+body{
+    font-family: "Verdana", sans-serif;
+    background: #edf2ff;
+    margin: 0px;
+    height: 100%;
+}
+
+h1{
+    font-weight: 100;
+    padding: 10px;
+    text-align: center;
+    background: #9ccbf0;
+}
+
+/* ===Form=== */
+form{
+    width: 270px;
+    margin: 0px auto 20px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 1em;
+    text-align: right;
+}
+input[type="text"]{
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    margin: 5px auto 15px auto;
+    padding: 10px;
+
+    /* So the inputs fit on the same line as the labels */
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.5em;
+
+    transition: background-color 0.5s;
+    background: #f1f1f1;
+}
+input[type="text"]:hover{
+    transition: background-color 0.20s;
+    background: #e7e7e7;
+}
+/* Generate Table Button */
+input[type="button"]{
+    display: block;
+    width: 100%;
+    padding: 5px;
+
+    transition: background-color 0.5s;
+    background: #2195EE;
+    border: none;
+    border-radius: 0.5em;
+
+    font-size: 18px;
+    color: #FFFFFF;
+
+    /* Change the cursor to a pointer when hovering over the button */
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    transition: background-color 0.20s;
+    background: #1e89db;
+}
+input[type="button"]:active{
+    /* Shrink the button a little when it is clicked */
+    transform: scale(0.97);
+}
+
+/* Error messages that are shown below the Generate Table Button when an input
+is invalid */
+.invalidInput{
+    font-size: 14px;
+    text-align: left;
+    font-style: italic;
+    color: red;
+    margin-bottom: 0px;
+}
+
+/* Ensures that table won't go off the screen and is easier to view by keeping
+it in a scrollable box */
+.scrollableContainer{
+    margin: auto;
+    width: 90%;
+    height: calc(100% - 450px);
+    overflow: auto;
+}
+
+/* ===Table=== */
+table{
+    table-layout: fixed;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+tr:nth-child(even){
+    background: #FFFFFF;
+}
+tr:hover{
+    background-color: #d3ecff;
+}
+th{
+    padding: 7px;
+    background-color: #9ccbf0;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+td{
+    padding: 7px;
+    border: 1px solid black;
+}

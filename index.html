@@ -1,0 +1,49 @@
+<!--
+File: index.html
+GUI Assignment: Homework 3 - Creating an Interactive Dynamic Table
+Michael McGilvray, michael_mcgilvray@student.uml.edu
+Copyright (c) 2021 by Michael McGilvray. All rights reserved. May be freely 
+copied or excerpted for educational purposes with credit to the author.
+Updated by MM on October 23, 2021 at 1:00PM
+
+This file is the structure of the multiplication table generator. It defines
+tags that are used by both the css and js files to style and make the
+table generation functional. This HTML file defines a form for inputs and
+an empty multiplication table that will be dynamically created using the
+inputs through the form.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Homework 3</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Multiplication Table Generator</h1>
+
+        <form>
+            <label>Minimum Column Value:</label>
+            <input type="text" id="minCol">
+
+            <label>Maximum Column Value:</label>
+            <input type="text" id="maxCol">
+
+            <label>Minimum Row Value:</label>
+            <input type="text" id="minRow">
+
+            <label>Maximum Row Value:</label>
+            <input type="text" id="maxRow">
+
+            <input type="button" id="submit" value="Generate Table">
+        </form>
+
+        <div class="scrollableContainer">
+            <table id="multiplicationTable">
+            </table>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
